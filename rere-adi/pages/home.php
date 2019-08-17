@@ -1,3 +1,6 @@
+<?php
+    $google_api_url = GCP_KEY ? "https://maps.googleapis.com/maps/api/js?key=".GCP_KEY."&callback=initMap" : "";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -248,7 +251,10 @@
       });
     </script>
     
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq2nUhEGzvqh85uQwLJOQR97R0Aeq8cK4&callback=initMap" async defer></script>
+    <?php
+        if ($google_api_url) {
+    ?>
+    <script src="<?php echo $google_api_url; ?>" async defer></script>
     <script>
       /* GOOGLE FORM */
       // When the window has finished loading create our google map below
@@ -430,5 +436,8 @@
       }
 
     </script>
+    <?php
+        }
+    ?>
   </body>
 </html>
