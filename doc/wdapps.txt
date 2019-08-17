@@ -1,0 +1,208 @@
+pernikahan.me
+
+//////////////////////////////////////////////////////////////////////////////////////
+/* membership rule */
+//////////////////////////////////////////////////////////////////////////////////////
+
+1.free
+- 1 web
+- 3 days publish
+- unlimited free theme
+
+2.personal minimal
+- 1 web
+- 1 weeks publish
+- unlimited themes free and 5 themes paid
+- no custom domain
+- fee 50k
+
+3.personal minimal plus
+- 1 web
+- 2 weeks publish
+- unlimited themes free and 10 themes paid
+- no custom domain
+- fee 150k
+
+4.personal medium
+- 1 web
+- 1 month publish
+- unlimited themes free and 25 themes paid
+- no custom domain
+- fee 300k
+
+5.personal high
+- 1 web
+- 2 month publish
+- unlimited themes free and paid
+- plus custom domain
+- fee 600k
+
+6.personal high plus
+- 1 web
+- less than 1 year publish
+- unlimited themes free and paid
+- plus custom domain
+- fee 1000k
+
+7.business silver
+- 3 web active
+- 1 web active maximal 2 month
+- 3 month membership
+- unlimited themes free and 25 themes paid
+- no custom domain
+- fee 500k 
+
+8.business gold
+- 10 web active
+- 1 web active maximal 3 month
+- 6 month membership
+- unlimited themes free and 50 themes paid
+- no custom domain
+- fee 1500k 
+
+9.business platinum
+- 50 web active
+- 1 web active maximal 6 month
+- 1 year membership
+- unlimited themes free and paid
+- 3 custom domain
+- fee 2500k 
+
+//////////////////////////////////////////////////////////////////////////////////////
+/* database scheme */
+//////////////////////////////////////////////////////////////////////////////////////
+
+1.users
+- user_id
+- user_fullname
+- user_email
+- user_password
+- user_reg_code
+- user_reg_date
+- user_role
+- user_status
+
+2.wedding
+- wedding_id
+- wedding_user_id
+- wedding_peroide_from
+- wedding_peroide_to
+- wedding_domain
+- wedding_type
+- wedding_theme
+- wedding_location
+- wedding_event_date
+- wedding_man
+- wedding_woman
+- wedding_status
+- wedding_domain
+
+3.content
+- content_id
+- content_wedding_id
+- value1
+- value2
+- value3
+- value4
+- value5
+- value6
+- value7
+- value8
+- value9
+- value10
+- value11
+- value12
+- value13
+- value14
+- value15
+- value16
+- value17
+- value18
+- value19
+- value20
+
+4.images
+- img_id
+- img_wedding_id
+- value1
+- value2
+- value3
+- value4
+- value5
+- value6
+- value7
+- value8
+- value9
+- value10
+- value11
+- value12
+- value13
+- value14
+- value15
+- value16
+- value17
+- value18
+- value19
+- value20
+
+5.themes
+- theme_id
+- theme_name
+- theme_type free/paid
+- theme_status free/paid
+
+6.role
+- role_id
+- role_name
+
+- admin (99)
+- personal0 = personal free (10)
+- personal1 = personal minimal (11)
+- personal2 = personal minimal plus (12)
+- personal3 = personal medium (13)
+- personal4 = personal high (14)
+- personal5 = personal high plus (15)
+- business1 = business silver (21)
+- business2 = business gold (22)
+- business3 = business platinum (23)
+
+7.rule
+- rule_id
+- role_id
+- publish (value 1/2/3 ...)
+- publish_periode (duration name days/weeks/months)
+- max_web
+- domain
+- domain_max
+- membership (value of month)
+- themes
+- fee
+
+8. domains
+- domain_id
+- domain_user_id
+- domain_name
+- domain_status
+
+//////////////////////////////////////////////////////////////////////////////////////
+/* fitur pernikahan.me */
+//////////////////////////////////////////////////////////////////////////////////////
+
+- publish web personal
+- publish web buiness
+- filter image like instagram
+
+//////////////////////////////////////////////////////////////////////////////////////
+/* FLOW */
+//////////////////////////////////////////////////////////////////////////////////////
+1. user register or login
+2. dashboard wdapps
+    - sites
+    - profile
+    - setting
+3. user select themes (font, color, layout)
+4. configure section and etc (transition, animation)
+    - section type (homepage/banner, words, greetings, time and location, gallery, footer)
+4. user insert content
+    - words
+    - image
